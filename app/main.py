@@ -37,7 +37,7 @@ def generate_text(request: TextGenerationRequest):
     """
     Endpoint for the original text generation functionality.
     """
-    generated_text = bigram_model.generate_text(request.start_word, request.length) #
+    generated_text = bigram_model.generate_text(request.start_word, request.length)
     return {"generated_text": generated_text}
 
 @app.post("/similarity")
